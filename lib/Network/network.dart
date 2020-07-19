@@ -233,10 +233,13 @@ class PokerApi {
             ? 'Bank'
             : '${toPlayer.name} borrows from ${fromPlayer.name}',
         amount: -amount);
-    var transaction = NewTransaction(gameId: game.id, requests: [
-      fromRequest,
-      toRequest,
-    ]).toJson();
+    List<TransactionRequest> requests = [fromRequest];
+    if (toPlayer.name != 'Bank') {
+      requests.add(toRequest);
+    }
+
+    var transaction =
+        NewTransaction(gameId: game.id, requests: requests).toJson();
 
     LoadingDialog.showLoadingDialog(context);
     final response = await http.post(
