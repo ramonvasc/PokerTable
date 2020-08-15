@@ -25,7 +25,11 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
 
   _GamePageState({Key key, @required this.game});
 
-  static const List<IconData> icons = const [Icons.person, Icons.attach_money];
+  static const List<IconData> icons = const [
+    Icons.equalizer,
+    Icons.person,
+    Icons.attach_money
+  ];
 
   @override
   void dispose() {
@@ -167,10 +171,16 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                 mini: true,
                 child: new Icon(icons[index], color: foregroundColor),
                 onPressed: () {
-                  if (index == 0) {
-                    _getNewPlayer();
-                  } else {
-                    _getNewTransaction();
+                  switch (index) {
+                    case 0:
+                      _checkTotalBalance();
+                      break;
+                    case 1:
+                      _getNewPlayer();
+                      break;
+                    default:
+                      _getNewTransaction();
+                      break;
                   }
                 },
               ),
@@ -389,5 +399,47 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
             },
           );
         });
+  }
+
+  void _checkTotalBalance() {
+    double totalBalance = 0;
+    game.players.forEach((player) {
+      totalBalance += player.balance;
+    });
+
+    if (totalBalance != 0) {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title:
+                  Text('Total balance is not zero! Balance is $totalBalance'),
+              actions: <Widget>[
+                FlatButton(
+                  child: new Text("Ok"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          });
+    } else {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Total balance is zero!'),
+              actions: <Widget>[
+                FlatButton(
+                  child: new Text("Ok"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          });
+    }
   }
 }

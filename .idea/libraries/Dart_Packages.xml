@@ -72,6 +72,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_stetho">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../flutter/.pub-cache/git/flutter_stetho-1787dd145d792e92427c9e2ffbb6dbffede1bcbb/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_test">
           <value>
             <list>
@@ -215,6 +222,7 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/git/flutter_stetho-1787dd145d792e92427c9e2ffbb6dbffede1bcbb/lib" />
       <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13/lib" />
       <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0/lib" />
       <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.dartlang.org/async-2.4.1/lib" />

@@ -22,6 +22,10 @@ environment:
 
 dependencies:
   http: ^0.12.1
+  flutter_stetho:
+    git:
+      url: https://github.com/brianegan/flutter_stetho
+      ref: 1787dd145d792e92427c9e2ffbb6dbffede1bcbb
   flutter:
     sdk: flutter
 
