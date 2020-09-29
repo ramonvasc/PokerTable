@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES>
-      <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/git/flutter_stetho-1787dd145d792e92427c9e2ffbb6dbffede1bcbb" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>

@@ -1,22 +1,16 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_stetho (0.0.1):
-    - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - flutter_stetho (from `.symlinks/plugins/flutter_stetho/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
-  flutter_stetho:
-    :path: ".symlinks/plugins/flutter_stetho/ios"
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_stetho: 0e844616b41b86d6429e86a518ae3a46e83af7cd
 
-PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
+PODFILE CHECKSUM: 2609452b760cd11039b14039a86564367a3d8ab9
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

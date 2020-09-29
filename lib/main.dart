@@ -1,16 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_stetho/flutter_stetho.dart';
 import 'package:poker_table/Network/network.dart';
 import 'package:poker_table/Pages/game_list_page.dart';
 
 import 'Pages/game_page.dart';
 
 void main() {
-  if (!kReleaseMode) {
-    // Network requests debugger
-    Stetho.initialize();
-  }
   runApp(MyApp());
 }
 
